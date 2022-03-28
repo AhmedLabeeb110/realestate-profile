@@ -1,0 +1,19 @@
+.logo {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.spaceItems {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.individualItems {
+  margin: 10px;
+}
+
+.appBar {
+  background-color: #eeedde;
+  color: #203239;
+  padding: 7px;
+}
