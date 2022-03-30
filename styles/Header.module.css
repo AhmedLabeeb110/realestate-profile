@@ -17,3 +17,12 @@
   color: #203239;
   padding: 7px;
 }
+
+
+.individualItems:hover {
+  text-decoration: underline;
+  text-decoration-color: #F6762E !important;
+  transition: 0.2s ease-in;
+  font-weight: 500;
+  text-decoration-thickness: 3px;
+}

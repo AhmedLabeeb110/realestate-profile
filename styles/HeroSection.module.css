@@ -1,0 +1,11 @@
+.HeroMain{
+    background-color: #EEEDDE;
+} 
+
+/* .HeroImgParent{
+  position: relative !important;
+} */
+
+#HeroImage {
+  margin-top: 40px !important;
+}
