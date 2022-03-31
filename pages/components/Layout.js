@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
+import PublicListings from "./PublicListings";
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();
@@ -20,6 +21,8 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
       <Header />
       {router.pathname === '/' && <HeroSection/>}
+      {router.pathname === '/' && <PublicListings/>}
+       {/*{router.pathname === '/' && <HeroSection/>}*/}
       <div>{children}</div>
       <Footer />
     </div>

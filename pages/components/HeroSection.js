@@ -53,8 +53,8 @@ export default function HeroSection() {
                   id="outlined-basic"
                   label="Search properties"
                   variant="outlined"
-                  placeholder="Search properties"
                   sx={{ width: "300%", maxWidth: "80vw" }}
+                  color="warning"
                 />
                 <Button
                   variant="contained"
