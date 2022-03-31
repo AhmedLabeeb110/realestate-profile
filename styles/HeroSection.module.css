@@ -1,11 +1,28 @@
-.HeroMain{
-    background-color: #EEEDDE;
-} 
-
-/* .HeroImgParent{
-  position: relative !important;
-} */
+.HeroMain {
+  background-color: #eeedde;
+}
 
 #HeroImage {
   margin-top: 40px !important;
+}
+
+.primaryText {
+  color: #203239;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  text-align: left;
+}
+
+.secondaryText p {
+  color: #203239;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  text-align: left;
+}
+
+.bannerButton{
+  background-color:#203239;
+}
+.bannerButton:hover{
+  background-color:#FF7527;
 }

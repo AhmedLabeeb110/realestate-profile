@@ -19,58 +19,65 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: "center",
   color: theme.palette.text.secondary,
-  boxShadow: theme.shadows[1],
+  boxShadow: theme.shadows[0],
+  backgroundColor: "#eeedde"
 }));
 
 export default function HeroSection() {
   return (
-    <div className={styles.HeroMain}>
-      {/*<Container maxWidth="xl" className={styles.HeroImgParent}>
-        <Image src={hero} alt="Hero Image" id={styles.HeroImage}/>
-  </Container>*/}
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={8} xl={6}>
-            <Item>
-              <h1>Temukan Hunian Keluarga Sesuai Keinginanmu</h1>
-            </Item>
-            <Item>
-              <p>
-                Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
-                lokasi yang strategis di kota anda dengan cara yang lebih mudah.
-              </p>
-            </Item>
-            <Item>
-              <Box
-                component="form"
-                sx={{
-                  "& > :not(style)": { m: 1, width: "25ch" },
-                }}
-                noValidate
-                autoComplete="off"
-              >
-                <Stack spacing={2} direction="row">
-                  <TextField
-                    id="outlined-basic"
-                    label="Search properties"
-                    variant="outlined"
-                    placeholder="Search location, properties, residental group"
-                  />
-                  <Button variant="contained">Contained</Button>
-                </Stack>
-              </Box>
-            </Item>
-            <Item>
-              <Image src={propertynumbers} alt="Property Numbers" />
-            </Item>
-          </Grid>
-          <Grid item xs={4} xl={6}>
-            <Item>
-              <Image src={hero} alt="Hero Image" id={styles.HeroImage} />
-            </Item>
-          </Grid>
+    <Box className={styles.HeroMain}>
+    <Container sx={{ maxWidth: {xl: 'xl', lg: 'lg'}, pt: 5, pb: 8}}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={7}>
+          <Item className={styles.primaryText}>
+            <h1>Temukan Hunian Keluarga Sesuai Keinginanmu</h1>
+          </Item>
+          <Item className={styles.secondaryText}>
+            <p>
+              Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
+              lokasi yang strategis di kota anda dengan cara yang lebih mudah.
+            </p>
+          </Item>
+
+          <Item className={styles.bannerInput}>
+            <Box
+              component="form"
+              sx={{
+                "& > :not(style)": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <Stack spacing={2}>
+                <TextField
+                  id="outlined-basic"
+                  label="Search properties"
+                  variant="outlined"
+                  placeholder="Search properties"
+                  sx={{ width: "300%", maxWidth: "80vw" }}
+                />
+                <Button
+                  variant="contained"
+                  sx={{ height: "48px" }}
+                  className={styles.bannerButton}
+                >
+                  Search
+                </Button>
+              </Stack>
+            </Box>
+          </Item>
+
+          <Item sx={{display: 'flex'}}>
+            <Image src={propertynumbers} alt="Property Numbers" />
+          </Item>
         </Grid>
-      </Box>
-    </div>
+        <Grid sx={{display: {xs: 'none', md: 'block'} }} item xs={12} md={5}>
+          <Item>
+            <Image src={hero} alt="Hero Image" id={styles.HeroImage} />
+          </Item>
+        </Grid>
+      </Grid>
+    </Container>
+    </Box>
   );
 }
