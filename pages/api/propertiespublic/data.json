@@ -1,0 +1,59 @@
+{
+  "propertiespublic": [
+    {
+      "id": "1",
+      "name": "Private Castle in Edinburgh",
+      "slug": "duke-castle",
+      "city": "Ediburgh",
+      "country": "Scotland",
+      "address": "919 3rd Ave Glasgow, Scotland",
+      "date": "June 09, 2021",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora quidem earum non mollitia error consectetur voluptatibus ut. Temporibus excepturi, nam commodi eius doloribus reprehenderit atque eaque debitis non beatae esse eveniet quas quod earum necessitatibus quidem at dolore nisi nesciunt! Ex consequuntur recusandae labore explicabo, maiores obcaecati porro sint.",
+      "image": "/mainImg/castle.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Nice Mansion in LA",
+        "slug": "la-mansion",
+        "city": "LA, California",
+        "country": "Scotland",
+        "address": "919 3rd Ave LA, USA",
+        "date": "June 09, 2021",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora quidem earum non mollitia error consectetur voluptatibus ut. Temporibus excepturi, nam commodi eius doloribus reprehenderit atque eaque debitis non beatae esse eveniet quas quod earum necessitatibus quidem at dolore nisi nesciunt! Ex consequuntur recusandae labore explicabo, maiores obcaecati porro sint.",
+        "image": "/mainImg/HouseOne.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Nice Mansion in LA",
+        "slug": "la-mansion",
+        "city": "LA, California",
+        "country": "Scotland",
+        "address": "919 3rd Ave LA, USA",
+        "date": "June 09, 2021",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora quidem earum non mollitia error consectetur voluptatibus ut. Temporibus excepturi, nam commodi eius doloribus reprehenderit atque eaque debitis non beatae esse eveniet quas quod earum necessitatibus quidem at dolore nisi nesciunt! Ex consequuntur recusandae labore explicabo, maiores obcaecati porro sint.",
+        "image": "/mainImg/HouseTwo.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Nice Mansion in LA",
+        "slug": "la-mansion",
+        "city": "LA, California",
+        "country": "Scotland",
+        "address": "919 3rd Ave LA, USA",
+        "date": "June 09, 2021",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora quidem earum non mollitia error consectetur voluptatibus ut. Temporibus excepturi, nam commodi eius doloribus reprehenderit atque eaque debitis non beatae esse eveniet quas quod earum necessitatibus quidem at dolore nisi nesciunt! Ex consequuntur recusandae labore explicabo, maiores obcaecati porro sint.",
+        "image": "/mainImg/HouseThree.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Nice Mansion in LA",
+        "slug": "la-mansion",
+        "city": "LA, California",
+        "country": "Scotland",
+        "address": "919 3rd Ave LA, USA",
+        "date": "June 09, 2021",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora quidem earum non mollitia error consectetur voluptatibus ut. Temporibus excepturi, nam commodi eius doloribus reprehenderit atque eaque debitis non beatae esse eveniet quas quod earum necessitatibus quidem at dolore nisi nesciunt! Ex consequuntur recusandae labore explicabo, maiores obcaecati porro sint.",
+        "image": "/mainImg/HouseFour.jpg"
+      }
+  ]
+}

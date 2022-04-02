@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Footer() {
   return (
     <footer>
-      <Box sx={{ flexGrow: 1 }} className={styles.footer}>
+      <Box sx={{ flexGrow: 1, padding: 3 }} className={styles.footer}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={3} md={3}>
             <Item className={styles.logo}>

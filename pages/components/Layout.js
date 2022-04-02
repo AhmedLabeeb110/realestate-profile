@@ -20,9 +20,8 @@ export default function Layout({ title, keywords, description, children }) {
         />
       </Head>
       <Header />
-      {router.pathname === '/' && <HeroSection/>}
-      {router.pathname === '/' && <PublicListings/>}
-       {/*{router.pathname === '/' && <HeroSection/>}*/}
+      {/*{router.pathname === '/' && <HeroSection/>}
+      {router.pathname === '/' && <PublicListings/>}*/}
       <div>{children}</div>
       <br />
       <br />
