@@ -1,0 +1,31 @@
+.footer {
+  background-color: #203239;
+}
+
+.logo {
+  background-color: #203239;
+  color: #eeedde;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.footerItemsMain {
+  background-color: #203239;
+  color: #eeedde;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footerItems {
+  background-color: #203239;
+  color: #eeedde;
+  font-size: 14px;
+}
+
+.footerItems:hover {
+  text-decoration: underline;
+  text-decoration-color: #f6762e !important;
+  transition: 0.2s ease-in;
+  font-weight: 500;
+  text-decoration-thickness: 3px;
+}

@@ -24,6 +24,9 @@ export default function Layout({ title, keywords, description, children }) {
       {router.pathname === '/' && <PublicListings/>}
        {/*{router.pathname === '/' && <HeroSection/>}*/}
       <div>{children}</div>
+      <br />
+      <br />
+      <br />
       <Footer />
     </div>
   );

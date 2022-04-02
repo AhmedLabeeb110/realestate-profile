@@ -29,8 +29,8 @@ export default function Header() {
             <Link href="/about">
               <a className={styles.individualItems}>About</a>
             </Link>
-            <Link href="/contact">
-              <a className={styles.individualItems}>Events</a>
+            <Link href="/#">
+              <a className={styles.individualItems}><b>Login</b></a>
             </Link>
           </div>
         </Toolbar>
