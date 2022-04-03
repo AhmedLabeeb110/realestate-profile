@@ -14,7 +14,7 @@
     {
         "id": "2",
         "name": "Nice Mansion in LA",
-        "slug": "la-mansion",
+        "slug": "la-mansion-1",
         "city": "LA, California",
         "country": "Scotland",
         "address": "919 3rd Ave LA, USA",
@@ -25,7 +25,7 @@
       {
         "id": "3",
         "name": "Nice Mansion in LA",
-        "slug": "la-mansion",
+        "slug": "la-mansion-2",
         "city": "LA, California",
         "country": "Scotland",
         "address": "919 3rd Ave LA, USA",
@@ -36,7 +36,7 @@
       {
         "id": "4",
         "name": "Nice Mansion in LA",
-        "slug": "la-mansion",
+        "slug": "la-mansion-3",
         "city": "LA, California",
         "country": "Scotland",
         "address": "919 3rd Ave LA, USA",
@@ -45,9 +45,9 @@
         "image": "/mainImg/HouseThree.jpg"
       },
       {
-        "id": "4",
+        "id": "5",
         "name": "Nice Mansion in LA",
-        "slug": "la-mansion",
+        "slug": "la-mansion-4",
         "city": "LA, California",
         "country": "Scotland",
         "address": "919 3rd Ave LA, USA",
