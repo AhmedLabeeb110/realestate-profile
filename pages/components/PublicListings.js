@@ -5,10 +5,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import styles from "../../styles/PublicListings.module.css";
-import PublicProperties from "./PublicProperties"
+import PublicProperties from "./PublicProperties";
 import { API_URL } from "../config/index";
-
-
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
   boxShadow: theme.shadows[0],
 }));
 
-export default function PublicListings({propertiespublic}) {
+export default function PublicListings({ propertiespublic }) {
   return (
     <Box sx={{ m: "0 auto", maxWidth: { xl: "xl", lg: "lg" }, pt: 8 }}>
       <Box>
@@ -39,9 +37,9 @@ export default function PublicListings({propertiespublic}) {
           <Grid container spacing={6}>
             <Grid item xs={12} md={4}>
               <Item>
-              {propertiespublic?.map((pp) =>{
-                <PublicProperties key={pp.id} pp={pp}/>
-              })} 
+                {propertiespublic.map((ppl) => (
+                  <PublicProperties key={ppl.id} ppl={ppl} />
+                ))}
               </Item>
             </Grid>
           </Grid>
@@ -56,6 +54,6 @@ export async function getStaticProps() {
   const propertiespublic = await res.json();
   return {
     props: { propertiespublic: propertiespublic.slice(0, 3) },
-    revalidate: 1
+    revalidate: 1,
   };
 }
