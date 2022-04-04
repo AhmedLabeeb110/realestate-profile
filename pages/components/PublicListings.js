@@ -5,8 +5,12 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import styles from "../../styles/PublicListings.module.css";
-import PublicProperties from "./PublicProperties";
-import { API_URL } from "../config/index";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import CardActions from "@mui/material/CardActions";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -17,29 +21,41 @@ const Item = styled(Paper)(({ theme }) => ({
   boxShadow: theme.shadows[0],
 }));
 
-export default function PublicListings({ propertiespublic }) {
+export default function PublicListings({ ppl }) {
   return (
     <Box sx={{ m: "0 auto", maxWidth: { xl: "xl", lg: "lg" }, pt: 8 }}>
       <Box>
         <Container>
-          <Grid container spacing={12}>
-            <Grid item xs={12} md={12}>
-              <Item className={styles.regularHeading}>
-                Tahapan Pembelian Properti yang Mudah dan Cepat
-              </Item>
-            </Grid>
-          </Grid>
-        </Container>
-        <br />
-        <br />
-        <br />
-        <Container>
           <Grid container spacing={6}>
             <Grid item xs={12} md={4}>
               <Item>
-                {propertiespublic.map((ppl) => (
-                  <PublicProperties key={ppl.id} ppl={ppl} />
-                ))}
+              <Card sx={{ maxWidth: 345 }} className={styles.cardBg}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={ppl.image}
+                alt="Public Cards"
+                sx={{ mb: 2 }}
+              />
+              <CardContent>
+                <Typography gutterBottom className={styles.CardTtiles}>
+                  {ppl.name}
+                </Typography>
+                <Typography className={styles.paragraph}>
+                  {ppl.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  variant="content"
+                  color="warning"
+                  className={styles.BtnStyles}
+                  sx={{ mb: 1 }}
+                >
+                  Baca lebih Lanjut
+                </Button>
+              </CardActions>
+            </Card>
               </Item>
             </Grid>
           </Grid>
@@ -47,13 +63,4 @@ export default function PublicListings({ propertiespublic }) {
       </Box>
     </Box>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/propertiespublic`);
-  const propertiespublic = await res.json();
-  return {
-    props: { propertiespublic: propertiespublic.slice(0, 3) },
-    revalidate: 1,
-  };
 }
