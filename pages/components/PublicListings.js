@@ -21,28 +21,30 @@ const Item = styled(Paper)(({ theme }) => ({
   boxShadow: theme.shadows[0],
 }));
 
-export default function PublicListings({ ppl }) {
+export default function PublicListings({ propertiespublic }) {
   return (
     <Box sx={{ m: "0 auto", maxWidth: { xl: "xl", lg: "lg" }, pt: 8 }}>
       <Box>
         <Container>
           <Grid container spacing={6}>
-            <Grid item xs={12} md={4}>
+           
+          {propertiespublic.map((property) => (
+          <Grid item xs={12} md={4} key={property.id}>
               <Item>
               <Card sx={{ maxWidth: 345 }} className={styles.cardBg}>
               <CardMedia
                 component="img"
                 height="140"
-                image={ppl.image}
+                image={property.image}
                 alt="Public Cards"
                 sx={{ mb: 2 }}
               />
               <CardContent>
                 <Typography gutterBottom className={styles.CardTtiles}>
-                  {ppl.name}
+                  {property.name}
                 </Typography>
                 <Typography className={styles.paragraph}>
-                  {ppl.description}
+                  {property.description}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -58,6 +60,7 @@ export default function PublicListings({ ppl }) {
             </Card>
               </Item>
             </Grid>
+            ))}
           </Grid>
         </Container>
       </Box>

@@ -13,9 +13,7 @@ export default function Home({ propertiespublic }) {
       <br />
       <br />
       <PublicHeading />
-      {propertiespublic.map((ppl) => (
-        <PublicListings key={ppl.id} ppl={ppl} />
-      ))}
+        <PublicListings propertiespublic={propertiespublic} />
     </Layout>
   );
 }
