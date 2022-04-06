@@ -3,6 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import styles from "../../styles/Header.module.css";
+import { signIn, signOut } from "next-auth/react";
 
 export default function Header() {
   return (
@@ -29,8 +30,27 @@ export default function Header() {
             <Link href="/about">
               <a className={styles.individualItems}>About</a>
             </Link>
-            <Link href="/#">
-              <a className={styles.individualItems}><b>Login</b></a>
+            <Link href="/api/auth/signin">
+              <a
+                className={styles.individualItems}
+                onClick={(e) => {
+                  e.preventDefault();
+                  signIn('github');
+                }}
+              >
+                <b>Login</b>
+              </a>
+            </Link>
+            <Link href="/api/auth/signout">
+              <a
+                className={styles.individualItems}
+                onClick={(e) => {
+                  e.preventDefault();
+                  signOut();
+                }}
+              >
+                <b>Logout</b>
+              </a>
             </Link>
           </div>
         </Toolbar>
