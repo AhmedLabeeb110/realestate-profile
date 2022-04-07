@@ -3,9 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import styles from "../../styles/Header.module.css";
-import { signIn, signOut } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Header() {
+  const { data: session, status } = useSession();
   return (
     <header>
       <AppBar position="static" className={styles.appBar} elevation={0}>
@@ -30,6 +31,7 @@ export default function Header() {
             <Link href="/about">
               <a className={styles.individualItems}>About</a>
             </Link>
+            {!session && status !== 'authenticated' && (
             <Link href="/api/auth/signin">
               <a
                 className={styles.individualItems}
@@ -40,8 +42,8 @@ export default function Header() {
               >
                 <b>Login</b>
               </a>
-            </Link>
-            <Link href="/api/auth/signout">
+            </Link>)}
+            {session && status !== 'unauthenticated' && ( <Link href="/api/auth/signout">
               <a
                 className={styles.individualItems}
                 onClick={(e) => {
@@ -51,7 +53,7 @@ export default function Header() {
               >
                 <b>Logout</b>
               </a>
-            </Link>
+            </Link>)}
           </div>
         </Toolbar>
       </AppBar>
