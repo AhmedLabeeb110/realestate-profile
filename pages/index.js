@@ -2,10 +2,18 @@ import Layout from "./components/Layout";
 import HeroSection from "./components/HeroSection";
 import PublicListings from "./components/PublicListings";
 import PublicHeading from "./components/PublicHeading";
+import { useEffect, useState } from "react";
 
-import { API_URL } from "./config/index";
+// import  {API_URL}  from "./config/index";
 
-export default function Home({ propertiespublic }) {
+export default function Home() {
+  const [propertiespublic, setPropertiesPublic] = useState([]);
+
+  useEffect(()=>{
+    fetch('/api/propertiespublic')
+    .then(res=> res.json())
+    .then(data=> setPropertiesPublic(data))
+  },[]);
   return (
     <Layout>
       <HeroSection />
@@ -13,16 +21,7 @@ export default function Home({ propertiespublic }) {
       <br />
       <br />
       <PublicHeading />
-        <PublicListings propertiespublic={propertiespublic} />
+        <PublicListings propertiespublic={propertiespublic.slice(0,3)} />
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/propertiespublic`);
-  const propertiespublic = await res.json();
-  return {
-    props: { propertiespublic: propertiespublic.slice(0, 3) },
-    revalidate: 1,
-  };
 }

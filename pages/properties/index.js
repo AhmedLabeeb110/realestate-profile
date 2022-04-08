@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "./components/Layout";
-import { useSession } from "next-auth/react";
+import Layout from "../components/Layout";
+import { useSession } from "next-auth/react"
 
-export default function properties() {
-  const { data: session, status } = useSession();
+export default function Properties() {
+    const { data: session, status } = useSession();
 
   return (
     <Layout>

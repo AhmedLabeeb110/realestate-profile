@@ -28,7 +28,7 @@ export default function PublicListings({ propertiespublic }) {
         <Container>
           <Grid container spacing={6}>
            
-          {propertiespublic.map((property) => (
+          {propertiespublic?.map((property) => (
           <Grid item xs={12} md={4} key={property.id}>
               <Item>
               <Card sx={{ maxWidth: 345 }} className={styles.cardBg}>

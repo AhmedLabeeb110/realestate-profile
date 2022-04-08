@@ -1,6 +1,6 @@
 const { propertiespublic } = require("./data.json");
 
-export default (req, res) => {
+const handler = (req, res) => {
   const ppl = propertiespublic.filter(pp => pp.slug === req.query.slug)
 
   if (req.method === "GET") {
@@ -10,3 +10,5 @@ export default (req, res) => {
     res.status(405).json({ message: `Method ${req.method} is not allowed` })
   }
 }
+
+export default handler;
