@@ -23,7 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function PublicListings({ propertiespublic }) {
   return (
-    <Box sx={{ m: "0 auto", maxWidth: { xl: "xl", lg: "lg" }, pt: 8 }}>
+    <Box sx={{ m: "0 auto", maxWidth: { xl: "xl", lg: "lg", md: "md" }, pt: 8 }}>
       <Box>
         <Container>
           <Grid container spacing={6}>

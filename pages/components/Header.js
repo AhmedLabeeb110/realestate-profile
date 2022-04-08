@@ -31,29 +31,32 @@ export default function Header() {
             <Link href="/about">
               <a className={styles.individualItems}>About</a>
             </Link>
-            {!session && status !== 'authenticated' && (
-            <Link href="/api/auth/signin">
-              <a
-                className={styles.individualItems}
-                onClick={(e) => {
-                  e.preventDefault();
-                  signIn('github');
-                }}
-              >
-                <b>Login</b>
-              </a>
-            </Link>)}
-            {session && status !== 'unauthenticated' && ( <Link href="/api/auth/signout">
-              <a
-                className={styles.individualItems}
-                onClick={(e) => {
-                  e.preventDefault();
-                  signOut();
-                }}
-              >
-                <b>Logout</b>
-              </a>
-            </Link>)}
+            {!session && status !== "authenticated" && (
+              <Link href="/api/auth/signin">
+                <a
+                  className={styles.individualItems}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signIn("github");
+                  }}
+                >
+                  <b>Login</b>
+                </a>
+              </Link>
+            )}
+            {session && status !== "unauthenticated" && (
+              <Link href="/api/auth/signout">
+                <a
+                  className={styles.individualItems}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signOut();
+                  }}
+                >
+                  <b>Logout</b>
+                </a>
+              </Link>
+            )}
           </div>
         </Toolbar>
       </AppBar>
