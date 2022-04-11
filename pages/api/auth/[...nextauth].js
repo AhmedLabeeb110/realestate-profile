@@ -10,4 +10,5 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
+  secret: "6sddsd4"
 })
